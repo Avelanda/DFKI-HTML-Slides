@@ -1,3 +1,5 @@
+# Copyright © 2025 [Avelanda].
+# All rights reserved.
 #!/usr/bin/env python
 
 import codecs
@@ -9,7 +11,7 @@ def process_slides():
   with codecs.open('../../presentation-output.html', 'w', encoding='utf8') as outfile:
     md = codecs.open('slides.md', encoding='utf8').read()
     md_slides = md.split('\n---\n')
-    print 'Compiled %s slides.' % len(md_slides)
+    print ('Compiled %s slides.' % len(md_slides))
 
     slides = []
     # Process each slide separately.
@@ -55,3 +57,15 @@ def postprocess_html(html, metadata):
 
 if __name__ == '__main__':
   process_slides()
+  
+def RenderSet(process_slides: int|str, parse_metadata: int|str, postprocess_html: int|str) -> [bool]:
+ RcoreSet = [process_slides, parse_metadata, postprocess_html]
+ if not RcoreSet:
+  RcoreSet == RenderSet
+ else:
+  if (RcoreSet == RenderSet) is not True:
+   for RcoreSet[False] in RcoreSet:
+    print (*RcoreSet)
+    return 0
+ 
+RenderSet(True)
